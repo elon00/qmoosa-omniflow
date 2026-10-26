@@ -1,0 +1,50 @@
+{
+  "mcpServers": {
+    "qmoosa-omniflow": {
+      "tools": [
+        {
+          "name": "solve_payment_intent",
+          "description": "Fulfills cross-chain payment intent across Arbitrum, Base, and Ethereum L2s",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "source_chain": {
+                "type": "string"
+              },
+              "target_chain": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "source_chain",
+              "target_chain",
+              "amount"
+            ]
+          }
+        },
+        {
+          "name": "sponsor_user_op",
+          "description": "Submits gasless UserOperation sponsorship via ERC-4337 Paymaster",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "sender": {
+                "type": "string"
+              },
+              "call_data": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "sender",
+              "call_data"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
